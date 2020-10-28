@@ -24,6 +24,13 @@ Você deverá criar uma feature de controle de estoque.
 
 ### Para utilizar a feature desenvolvida é necessário primeiro cadastrar estoques através do endpoint estoque/insert e movimentar os produtos através do endpoint estoque/transfer
 
+Exemplo de body para a requisição do endpoint estoque/insert: 
+{
+    "produtoId": "Cod-Produto-2",
+    "filialId": 1,
+    "quantidade": 10
+}
+
 
 
 
