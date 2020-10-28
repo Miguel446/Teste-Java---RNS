@@ -22,6 +22,8 @@ Você deverá criar uma feature de controle de estoque.
 - Todos os endpoints dessa API devem estar funcionando adequadamente.
 - Você tem total liberdade para fazer qualquer alteração no projeto que achar pertinente, desde que ele continue atendendo aos objetivos principais da API.
 
+### Para utilizar a feature desenvolvida é necessário primeiro cadastrar estoques através do endpoint estoque/insert e movimentar os produtos através do endpoint estoque/transfer
+
 
 
 
