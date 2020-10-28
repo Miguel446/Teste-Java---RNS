@@ -36,4 +36,7 @@ public class Movimentacao extends GenericEntity<Long> {
 	@Column
 	private Long quantidade;
 
+	@Column
+	private String descricao;
+
 }

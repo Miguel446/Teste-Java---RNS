@@ -20,5 +20,7 @@ public class MovimentacaoDto {
 	private Long estoqueId;
 	@NotNull(message = "O id da nova filial não pode ser vazio")
 	private Long novaFilialId;
+	@NotEmpty(message = "A descrição da movimentação não pode ser vazia")
+	private String descricao;
 
 }

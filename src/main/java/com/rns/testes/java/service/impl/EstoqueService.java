@@ -46,14 +46,14 @@ public class EstoqueService extends AbstractGenericServicePersistence<IEstoqueDa
 		Optional<Estoque> estoqueDestinatario = estoqueDao.findByFilial_IdEqualsAndProduto_IdEquals(
 				movimentacao.getNovaFilialId(), estoqueRemetente.getProduto().getId());
 
+		Estoque estoque = new Estoque();
 		if (estoqueDestinatario.isEmpty()) {
-			Estoque novoEstoque = new Estoque();
-			novoEstoque.setProduto(estoqueRemetente.getProduto());
-			novoEstoque.setQuantidade(estoqueRemetente.getQuantidade());
-			novoEstoque.setFilial(filialService.findById(movimentacao.getNovaFilialId()));
-			estoqueDao.save(novoEstoque);
+			estoque.setProduto(estoqueRemetente.getProduto());
+			estoque.setQuantidade(estoqueRemetente.getQuantidade());
+			estoque.setFilial(filialService.findById(movimentacao.getNovaFilialId()));
+			estoqueDao.save(estoque);
 		} else {
-			Estoque estoque = estoqueDestinatario.get();
+			estoque = estoqueDestinatario.get();
 			estoque.setQuantidade(estoque.getQuantidade() + quantidade);
 			estoqueDao.save(estoque);
 		}

@@ -139,6 +139,7 @@ public class EstoqueController {
 		m.setEstoqueId(dto.getEstoqueId());
 		m.setNovaFilialId(dto.getNovaFilialId());
 		m.setQuantidade(dto.getQuantidade());
+		m.setDescricao(dto.getDescricao());
 		return m;
 	}
 

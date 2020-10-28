@@ -83,6 +83,7 @@ public class MovimentacaoController {
 		m.setQuantidade(dto.getQuantidade());
 		m.setEstoqueId(dto.getEstoqueId());
 		m.setNovaFilialId(dto.getNovaFilialId());
+		m.setDescricao(dto.getDescricao());
 		return m;
 	}
 
